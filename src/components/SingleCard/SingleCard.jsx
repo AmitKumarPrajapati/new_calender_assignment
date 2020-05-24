@@ -1,6 +1,5 @@
 import React from "react";
 import "./SingleCard.css";
-
 /* Single Card component */
 class SingleCard extends React.Component {
   constructor(props) {
