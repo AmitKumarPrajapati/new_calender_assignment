@@ -1,8 +1,14 @@
 import React from 'react';
 import './SingleCard.css';
 
-const SingleCard = (props) => {
-    const addClassToCard = (status) => {
+
+class SingleCard extends React.Component {
+    constructor(props) {
+        super(props);
+    this.state = { isOpen: false }
+    }
+    
+    addClassToCard = (status) => {
         if(status==="Blocked") {
             return "card-blocked-state"
         } else if(status === "Open") {
@@ -10,14 +16,25 @@ const SingleCard = (props) => {
         } return "card-box"
     }
 
-    const { time, status } = props;
-    console.log("I am tha status",status);
-    return (
-        <div className= { addClassToCard(status)}>
-            <h3>{time}</h3>
-            <h3>{status}</h3>
-        </div>
-    )
+    handleCardClick = () => {
+        this.setState({isOpen: true})
+    }
+    render () {
+        const { time, status } = this.props;
+        console.log("I am tha status",status);
+        return (
+            <div onClick={() => this.handleCardClick()} className= { this.addClassToCard(status)}>
+                <div>
+                <p className="card-time-font">{time}</p>
+                <p className="card-status-font">{status}</p>
+                 </div>
+                 <div>
+                </div>
+            </div>
+        )
+
+    }
+   
 }
 
 export default SingleCard;

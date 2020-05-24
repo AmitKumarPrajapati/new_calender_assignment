@@ -1,6 +1,6 @@
 import React from 'react';
 import './Calender.css';
-import DetailCard from '../DetailCard';
+// import DetailCard from '../DetailCard';
 import mockData from './mockData';
 import DateAndDay from '../DateAndDay';
 import mockBookingData from '../CalenderRow/mockBookingData'
@@ -14,7 +14,7 @@ const elevenAm = mockBookingData["11 AM"];
 const twelvePm = mockBookingData["12 PM"];
 const onePm = mockBookingData["1 PM"];
 
-const timeSlot = ["8 AM","9 AM","10 AM","11 AM","12 PM","1 PM"];
+// const timeSlot = ["8 AM","9 AM","10 AM","11 AM","12 PM","1 PM"];
 
 
 const allData = [eightAm,nineAm,tenAm,elevenAm,twelvePm,onePm];
