@@ -1,13 +1,13 @@
 import React from 'react';
 import SingleCard from '../SingleCard'
+import './CalenderRow.css'
 
 console.log("Hello this is calender app");
 
 const CalenderRow = (props) => {
-    console.log("------------------>>>>>>>>>>>>>>>>",props.rowData)
     const { rowData } = props;
     return(
-        <div>
+        <div className="calender-row">
         {
             rowData.map(row => {
                 const {time,status} = row;

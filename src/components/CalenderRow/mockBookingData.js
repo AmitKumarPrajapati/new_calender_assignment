@@ -134,7 +134,7 @@ const mockBookingData = {
         },
         {
             time:"12 pm",
-            status:"Justin Timbertake"
+            status:"Justin Canetti"
         },
         {
             time:"12 pm",
@@ -150,6 +150,10 @@ const mockBookingData = {
         },
     ],
     "1 PM": [
+        {
+            time:"1 pm",
+            status:"Blocked"
+        },
         {
             time:"1 pm",
             status:"Blocked"
