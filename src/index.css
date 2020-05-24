@@ -2,13 +2,13 @@
   z-index: 4;
 }
 
-.bp3-spinner{
-  height:100vh;
+.bp3-spinner {
+  height: 100vh;
   background: #ffffff;
 }
 
-.bp3-button-text .bp3-spinner{
-  height:auto;
+.bp3-button-text .bp3-spinner {
+  height: auto;
   background: transparent;
 }
 
