@@ -1,185 +1,310 @@
 const mockBookingData = {
-    "8 AM" : [
-        {
-            time: "8 am",
-            status: "Blocked"
-        },
-        {
-            time: "8 am",
-            status: "Blocked"
-        },
-        {
-            time: "8 am",
-            status: "Blocked"
-        },
-        {
-            time: "8 am",
-            status: "Blocked"
-        },
-        {
-            time: "8 am",
-            status: "Blocked"
-        },
-        {
-            time: "8 am",
-            status: "Blocked"
-        },
-        {
-            time: "8 am",
-            status: "Blocked"
-        },
-    ],
-    "9 AM" : [
-        {
-            time:"9 am",
-            status: "Blocked"
-        },
-        {
-            time:"9 am",
-            status: "Open"
-        },
-        {
-            time:"9 am",
-            status: "Open"
-        },
-        {
-            time: "9 am",
-            status: "Open"
-        },
-        {
-            time: "9 am",
-            status: "Rene Piessner"
-        },
-        {
-            time: "9 am",
-            status: "Open"
-        },
-        {
-            time: "9 am",
-            status: "Blocked"
-        }
-    ],
-    "10 AM": [
-            {
-                time:"10 am",
-                status: "Blocked"
-            },
-            {
-                time:"10 am",
-                status: "Justin Canetti"
-            },
-            {
-                time:"10 am",
-                status: "Justin Canetti"
-            },
-            {
-                time:"10 am",
-                status: "Justin Canetti"
-            },
-            {
-                time:"10 am",
-                status: "Justin Canetti"
-            },
-            {
-                time:"10 am",
-                status: "Justin Canetti"
-            },
-            {
-                time: "10 am",
-                status: "Blocked"
-            }
-        ],
-    "11 AM":[
-            {
-                time:"11 am",
-                status: "Blocked"
-            },
-            {
-                time:"11 am",
-                status: "Hillary Clinton"
-            },
-            {
-                time:"11 am",
-                status: "Open"
-            },
-            {
-                time:"11 am",
-                status: "Open"
-            },
-            {
-                time:"11 am",
-                status: "Open"
-            },
-            {
-                time:"11 am",
-                status: "Open"
-            },
-            {
-                time:"11 am",
-                status: "Blocked"
-            },
-    ],
-    "12 PM" : [
-        {
-            time:"12 pm",
-            status:"Blocked"
-        },
-        {
-            time:"12 pm",
-            status:"Open"
-        },
-        {
-            time:"12 pm",
-            status:"Open"
-        },
-        {
-            time:"12 pm",
-            status:"Justin Canetti"
-        },
-        {
-            time:"12 pm",
-            status:"Open"
-        },
-        {
-            time:"12 pm",
-            status:"Open"
-        },
-        {
-            time:"12 pm",
-            status:"Blocked"
-        },
-    ],
-    "1 PM": [
-        {
-            time:"1 pm",
-            status:"Blocked"
-        },
-        {
-            time:"1 pm",
-            status:"Blocked"
-        },
-        {
-            time:"1 pm",
-            status:"Blocked"
-        },
-        {
-            time:"1 pm",
-            status:"Blocked"
-        },
-        {
-            time:"1 pm",
-            status:"Blocked"
-        },
-        {
-            time:"1 pm",
-            status:"Blocked"
-        },
-        {
-            time:"1 pm",
-            status:"Blocked"
-        }
-    ]
-}
+  "8 AM": [
+    {
+      time: "8 am",
+      status: "Blocked",
+      day: "Sunday",
+      date: "29",
+      month: "March",
+    },
+    {
+      time: "8 am",
+      status: "Blocked",
+      day: "Monday",
+      date: "30",
+      month: "March",
+    },
+    {
+      time: "8 am",
+      status: "Blocked",
+      day: "Tuesday",
+      date: "31",
+      month: "March",
+    },
+    {
+      time: "8 am",
+      status: "Blocked",
+      day: "Wednesday",
+      date: "01",
+      month: "April",
+    },
+    {
+      time: "8 am",
+      status: "Blocked",
+      day: "Thursday",
+      date: "02",
+      month: "April",
+    },
+    {
+      time: "8 am",
+      status: "Blocked",
+      day: "Friday",
+      date: "03",
+      month: "April",
+    },
+    {
+      time: "8 am",
+      status: "Blocked",
+      day: "Saturday",
+      date: "04",
+      month: "April",
+    },
+  ],
+  "9 AM": [
+    {
+      time: "9 am",
+      status: "Blocked",
+      day: "Sunday",
+      date: "29",
+      month: "March",
+    },
+    {
+      time: "9 am",
+      status: "Open",
+      day: "Monday",
+      date: "30",
+      month: "March",
+    },
+    {
+      time: "9 am",
+      status: "Open",
+      day: "Tuesday",
+      date: "31",
+      month: "March",
+    },
+    {
+      time: "9 am",
+      status: "Open",
+      day: "Wednesday",
+      date: "01",
+      month: "April",
+    },
+    {
+      time: "9 am",
+      status: "Rene Piessner",
+      day: "Thursday",
+      date: "02",
+      month: "April",
+    },
+    {
+      time: "9 am",
+      status: "Open",
+      day: "Friday",
+      date: "03",
+      month: "April",
+    },
+    {
+      time: "9 am",
+      status: "Blocked",
+      day: "Saturday",
+      date: "04",
+      month: "April",
+    },
+  ],
+  "10 AM": [
+    {
+      time: "10 am",
+      status: "Blocked",
+      day: "Sunday",
+      date: "29",
+      month: "March",
+    },
+    {
+      time: "10 am",
+      status: "Justin Canetti",
+      day: "Monday",
+      date: "30",
+      month: "March",
+    },
+    {
+      time: "10 am",
+      status: "Justin Canetti",
+      day: "Tuesday",
+      date: "31",
+      month: "March",
+    },
+    {
+      time: "10 am",
+      status: "Justin Canetti",
+      day: "Wednesday",
+      date: "01",
+      month: "April",
+    },
+    {
+      time: "10 am",
+      status: "Justin Canetti",
+      day: "Thursday",
+      date: "02",
+      month: "April",
+    },
+    {
+      time: "10 am",
+      status: "Justin Canetti",
+      day: "Friday",
+      date: "03",
+      month: "April",
+    },
+    {
+      time: "10 am",
+      status: "Blocked",
+      day: "Saturday",
+      date: "04",
+      month: "April",
+    },
+  ],
+  "11 AM": [
+    {
+      time: "11 am",
+      status: "Blocked",
+      day: "Sunday",
+      date: "29",
+      month: "March",
+    },
+    {
+      time: "11 am",
+      status: "Hillary Clinton",
+      day: "Monday",
+      date: "30",
+      month: "March",
+    },
+    {
+      time: "11 am",
+      status: "Open",
+      day: "Tuesday",
+      date: "31",
+      month: "March",
+    },
+    {
+      time: "11 am",
+      status: "Open",
+      day: "Wednesday",
+      date: "01",
+      month: "April",
+    },
+    {
+      time: "11 am",
+      status: "Open",
+      day: "Thursday",
+      date: "02",
+      month: "April",
+    },
+    {
+      time: "11 am",
+      status: "Open",
+      day: "Friday",
+      date: "03",
+      month: "April",
+    },
+    {
+      time: "11 am",
+      status: "Blocked",
+      day: "Saturday",
+      date: "04",
+      month: "April",
+    },
+  ],
+  "12 PM": [
+    {
+      time: "12 pm",
+      status: "Blocked",
+      day: "Sunday",
+      date: "29",
+      month: "March",
+    },
+    {
+      time: "12 pm",
+      status: "Open",
+      day: "Monday",
+      date: "30",
+      month: "March",
+    },
+    {
+      time: "12 pm",
+      status: "Open",
+      day: "Tuesday",
+      date: "31",
+      month: "March",
+    },
+    {
+      time: "12 pm",
+      status: "Justin Canetti",
+      day: "Wednesday",
+      date: "01",
+      month: "April",
+    },
+    {
+      time: "12 pm",
+      status: "Open",
+      day: "Thursday",
+      date: "02",
+      month: "April",
+    },
+    {
+      time: "12 pm",
+      status: "Open",
+      day: "Friday",
+      date: "03",
+      month: "April",
+    },
+    {
+      time: "12 pm",
+      status: "Blocked",
+      day: "Saturday",
+      date: "04",
+      month: "April",
+    },
+  ],
+  "1 PM": [
+    {
+      time: "1 pm",
+      status: "Blocked",
+      day: "Sunday",
+      date: "29",
+      month: "March",
+    },
+    {
+      time: "1 pm",
+      status: "Blocked",
+      day: "Monday",
+      date: "30",
+      month: "March",
+    },
+    {
+      time: "1 pm",
+      status: "Blocked",
+      day: "Tuesday",
+      date: "31",
+      month: "March",
+    },
+    {
+      time: "1 pm",
+      status: "Blocked",
+      day: "Wednesday",
+      date: "01",
+      month: "April",
+    },
+    {
+      time: "1 pm",
+      status: "Blocked",
+      day: "Thursday",
+      date: "02",
+      month: "April",
+    },
+    {
+      time: "1 pm",
+      status: "Blocked",
+      day: "Friday",
+      date: "03",
+      month: "April",
+    },
+    {
+      time: "1 pm",
+      status: "Blocked",
+      day: "Saturday",
+      date: "04",
+      month: "April",
+    },
+  ],
+};
 
 export default mockBookingData;
-    

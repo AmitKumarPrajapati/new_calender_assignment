@@ -1,40 +1,25 @@
 import React from "react";
+import "./DialogBox.css";
 
 class DialogBox extends React.Component {
   render() {
-    // Render nothing if the "show" prop is false
+    const { time, status, setDialogOpen, day, date, month } = this.props;
     if (!this.props.show) {
       return null;
     }
-
-    // The gray background
-    const backdropStyle = {
-      position: "absolute",
-      top: 0,
-      bottom: 0,
-      left: 0,
-      right: 0,
-      backgroundColor: "rgba(0,0,0,0.3)",
-      padding: 50,
-    };
-
-    // The modal "window"
-    const modalStyle = {
-      backgroundColor: "#fff",
-      borderRadius: 5,
-      maxWidth: 500,
-      minHeight: 300,
-      margin: "0 auto",
-      padding: 30,
-    };
-
     return (
-      <div className="backdrop" style={{ backdropStyle }}>
-        <div className="modal" style={{ modalStyle }}>
-          {this.props.children}
-
-          <div className="footer">
-            <button onClick={this.props.onClose}>Close</button>
+      <div className="backdrop">
+        <div className="modal">
+          <div>
+            <h2>{status}</h2>
+            <h5>{`${day}, ${month} ${date} at ${time}`}</h5>
+          </div>
+          <div className="repeat-text">Repeates every day</div>
+          <div className="button-section">
+            <button className="res-btn">Reschedule</button>
+            <button onClick={() => setDialogOpen()} className="cancel-btn">
+              Cancel
+            </button>
           </div>
         </div>
       </div>

@@ -4,14 +4,21 @@ import "./CalenderRow.css";
 
 /* Calender row component*/
 const CalenderRow = (props) => {
-  const { rowData } = props;
+  const { rowData, setDialogOpen } = props;
   return (
     <div className="calender-row">
       {rowData.map((row) => {
-        const { time, status } = row;
+        const { time, status, day, date, month } = row;
         return (
           <div>
-            <SingleCard time={time} status={status} />
+            <SingleCard
+              setDialogOpen={setDialogOpen}
+              time={time}
+              status={status}
+              day={day}
+              date={date}
+              month={month}
+            />
           </div>
         );
       })}

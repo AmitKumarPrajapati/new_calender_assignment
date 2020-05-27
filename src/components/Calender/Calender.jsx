@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Calender.css";
 import mockData from "./mockData";
 import DateAndDay from "../DateAndDay";
 import mockBookingData from "../CalenderRow/mockBookingData";
 import CalenderRow from "../CalenderRow";
+import DialogBox from "../DialogBox";
 
 /* Get data from moc data on the basis of key */
 const eightAm = mockBookingData["8 AM"];
@@ -18,8 +19,29 @@ const allData = [eightAm, nineAm, tenAm, elevenAm, twelvePm, onePm];
 
 /* Calender component */
 const Calender = () => {
+  const [isDialogOpen, setOpen] = useState(false);
+  const [time, setTime] = useState("");
+  const [status, setStatus] = useState("");
+  const [close, isClose] = useState(false);
+  const [day, setDay] = useState("");
+  const [date, setDate] = useState("");
+  const [month, setMonth] = useState("");
+
+  const setDialogOpen = (time, status, day, date, month) => {
+    setOpen(!isDialogOpen);
+    setTime(time);
+    setStatus(status);
+    setDay(day);
+    setDate(date);
+    setMonth(month);
+  };
+
   return (
-    <div className="calender-container">
+    <div
+      className={
+        isDialogOpen ? "calender-container-shadow" : "calender-container"
+      }
+    >
       <div className="calender-head">
         {mockData.map((currentDay) => {
           const { day, date } = currentDay;
@@ -33,9 +55,19 @@ const Calender = () => {
         })}
       </div>
       {allData.map((data) => {
-        console.log("I am here at one", data);
-        return <CalenderRow rowData={data} />;
+        return <CalenderRow rowData={data} setDialogOpen={setDialogOpen} />;
       })}
+      <div>
+        <DialogBox
+          show={isDialogOpen}
+          setDialogOpen={setDialogOpen}
+          time={time}
+          status={status}
+          day={day}
+          date={date}
+          month={month}
+        />
+      </div>
     </div>
   );
 };

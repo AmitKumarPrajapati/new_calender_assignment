@@ -1,5 +1,6 @@
 import React from "react";
 import "./SingleCard.css";
+import DialogBox from "../DialogBox";
 /* Single Card component */
 class SingleCard extends React.Component {
   constructor(props) {
@@ -18,21 +19,17 @@ class SingleCard extends React.Component {
   };
 
   /* function for handle the click on card */
-  handleCardClick = () => {
-    this.setState({ isOpen: true });
-  };
   render() {
-    const { time, status } = this.props;
+    const { time, status, day, date, month, setDialogOpen } = this.props;
     return (
       <div
-        onClick={() => this.handleCardClick()}
+        onClick={() => setDialogOpen(time, status, day, date, month)}
         className={this.addClassToCard(status)}
       >
         <div>
           <p className="card-time-font">{time}</p>
           <p className="card-status-font">{status}</p>
         </div>
-        <div></div>
       </div>
     );
   }
