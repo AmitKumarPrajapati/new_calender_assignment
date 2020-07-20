@@ -17,7 +17,7 @@
     "enzyme-to-json": "3.4.3",
     "graphql-tag": "2.10.1",
     "handsontable": "7.3.0",
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "lodash.clonedeep": "4.5.0",
     "lodash.merge": "4.6.2",
     "moment": "^2.26.0",
